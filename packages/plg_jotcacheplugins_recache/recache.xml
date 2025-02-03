@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="5.0" type="plugin" group="jotcacheplugins" method="upgrade">
+    <name>Recache</name>
+    <author>Dudebaker</author>
+    <creationDate>February 2025</creationDate>
+    <copyright>(C)2010-2018 Vladimir Kanich. All rights reserved.</copyright>
+    <copyright>(C)2025+ Open Source Matters, Inc.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>7.0.0</version>
+    <description>PLG_RECACHE_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="recache">recache.php</filename>
+        <filename plugin="recache">recache_form.php</filename>
+        <filename plugin="recache">recache_status.php</filename>
+        <filename>index.html</filename>
+    </files>
+</extension>

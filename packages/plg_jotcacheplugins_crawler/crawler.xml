@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="5.0" type="plugin" group="jotcacheplugins" method="upgrade">
+    <name>Crawler</name>
+    <author>Dudebaker</author>
+    <creationDate>February 2025</creationDate>
+    <copyright>(C)2010-2018 Vladimir Kanich. All rights reserved.</copyright>
+    <copyright>(C)2025+ Open Source Matters, Inc.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>7.0.0</version>
+    <description>PLG_CRAWLER_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="crawler">crawler.php</filename>
+        <filename plugin="crawler">crawler_form.php</filename>
+        <filename plugin="crawler">crawler_status.php</filename>
+        <filename>index.html</filename>
+    </files>
+</extension>

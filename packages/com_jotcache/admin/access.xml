@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ @package         JotCache
+
+ @copyright   (C) 2010-2018 Vladimir Kanich
+ @copyright   (C) 2025+ Open Source Matters, Inc.
+ @license         GNU General Public License version 2 or later
+-->
+<access component="com_jotcache">
+    <section name="component">
+        <action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC"/>
+        <action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC"/>
+        <action name="jotcache.manage" title="JOTCACHE_ACTION_MANAGE" description="JOTCACHE_ACTION_MANAGE_DESC"/>
+    </section>
+</access>

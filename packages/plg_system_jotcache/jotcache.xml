@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="5.0" type="plugin" group="system" method="upgrade">
+    <name>JotCache</name>
+    <author>Dudebaker</author>
+    <creationDate>February 2025</creationDate>
+    <copyright>(C)2010-2018 Vladimir Kanich. All rights reserved.</copyright>
+    <copyright>(C)2025+ Open Source Matters, Inc.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>7.0.0</version>
+    <description>PLG_SYSTEM_JOTCACHE_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="jotcache">jotcache.php</filename>
+        <filename plugin="jotcache">JotcacheCustom.dist.php</filename>
+        <folder plugin="jotcache">jotcache</folder>
+        <folder plugin="jotcache">fields</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/plugins/system/jotcache/fields">
+                <field name="spacer2" type="spacer" default="" label="JOTCACHE_SERVER_SPACER"/>
+                <field name="cachetime" type="text" default="15" label="JOTCACHE_LIFE_LBL"
+                       description="JOTCACHE_LIFE_DESC"/>
+                <field name="cacheextratimes" type="radio" default="0" class="btn-group btn-group-yesno"
+                       label="JOTCACHE_EXTRA_TIMES" description="JOTCACHE_EXTRA_TIMES_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="autoclean" type="text" default="" label="JOTCACHE_CLEAN_LBL"
+                       description="JOTCACHE_CLEAN_DESC"/>
+                <field name="cleanmode" type="radio" default="0" class="btn-group" label="JOTCACHE_MODE_LBL"
+                       description="JOTCACHE_MODE_DESC">
+                    <option value="1">JOTCACHE_MODE_FAST</option>
+                    <option value="2">JOTCACHE_MODE_MID</option>
+                    <option value="3">JOTCACHE_MODE_SLOW</option>
+                </field>
+                <field name="cleanlog" type="radio" default="0" class="btn-group btn-group-yesno"
+                       label="JOTCACHE_LOG_LBL"
+                       description="JOTCACHE_LOG_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="spacer3" type="spacer" default="" label="JOTCACHE_URL_PROCESSING_SPACER"/>
+                <field name="domain" type="hidden" default="1" class="btn-group btn-group-yesno"
+                       label="JOTCACHE_DOMAIN_LBL"
+                       description="JOTCACHE_DOMAIN_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="domainfilter" type="textarea" default="" label="JOTCACHE_DOMAIN_FILTER_LBL"
+                       description="JOTCACHE_DOMAIN_FILTER_DESC" rows="3" cols="35"/>
+                <field name="urlselection" type="radio" default="0" class="btn-group btn-group-yesno"
+                       label="JOTCACHE_URL_MODE_LBL" description="JOTCACHE_URL_MODE_DESC">
+                    <option value="0">JOTCACHE_EXCLUDE</option>
+                    <option value="1">JOTCACHE_INCLUDE</option>
+                </field>
+                <field name="cacheexclude" type="textarea" default="" label="JOTCACHE_GLOBAL_URL_LBL"
+                       description="JOTCACHE_GLOBAL_URL_DESC" rows="3" cols="35"/>
+            </fieldset>
+            <fieldset name="operation" addfieldpath="/plugins/system/jotcache/fields">
+                <field name="cacheclient" type="browsers" default="" label="JOTCACHE_CLIENT_LBL"
+                       description="JOTCACHE_CLIENT_DESC"/>
+                <field name="botexclude" type="radio" default="0" class="btn-group btn-group-yesno"
+                       label="JOTCACHE_EXBOT_LBL"
+                       description="JOTCACHE_EXBOT_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="cachedebug" type="radio" default="0" class="btn-group btn-group-yesno"
+                       label="JOTCACHE_DEBUG_LBL" description="JOTCACHE_DEBUG_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JOTCACHE_ERROR_LOG</option>
+                    <option value="2">JOTCACHE_DEBUG_LOG</option>
+                </field>
+            </fieldset>
+            <fieldset name="storage" addfieldpath="/plugins/system/jotcache/fields">
+                <field name="storage" type="storages" default="file" description="JOTCACHE_CACHE_STORAGE_DESC"
+                       label="JOTCACHE_CACHE_STORAGE_LBL"/>
+            </fieldset>
+            <fieldset name="advanced" addfieldpath="/plugins/system/jotcache/fields">
+                <field name="spacer" type="spacer" default="" label="JOTCACHE_BROWSER_SPACER"/>
+                <field name="browsercache" type="radio" default="0" class="btn-group btn-group-yesno"
+                       label="JOTCACHE_BROWSER_LBL" description="JOTCACHE_BROWSER_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="spacer4" type="spacer" default="" label="JOTCACHE_CLEAN_FRONTEDIT_SPACER"/>
+                <field name="editdelete" type="radio" default="0" class="btn-group btn-group-yesno"
+                       label="JOTCACHE_EDIT_DELETE_LBL" description="JOTCACHE_EDIT_DELETE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="spacer5" type="spacer" default="" label="JOTCACHE_SPECIAL_SPACER"/>
+                <field name="qsexclude" type="radio" default="0" class="btn-group btn-group-yesno"
+                       label="JOTCACHE_EX_QUERY_STRING_LBL"
+                       description="JOTCACHE_EX_QUERY_STRING_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="cachecookies" type="textarea" default="" label="JOTCACHE_EXCOOKIE_LBL"
+                       description="JOTCACHE_EXCOOKIE_DESC" rows="3" cols="35"/>
+                <field name="cachesessionvars" type="textarea" default="" label="JOTCACHE_EXSESSION_LBL"
+                       description="JOTCACHE_EXSESSION_DESC" rows="3" cols="35"/>
+                <field name="jcintegration" type="list" default="" label="JOTCACHE_JCINTEGRATION_LBL"
+                       description="JOTCACHE_JCINTEGRATION_DESC">
+                    <option value="">JOTCACHE_NO_INTEGRATION</option>
+                    <option value="jch4">JCH Optimize v.4</option>
+                    <option value="jch5">JCH Optimize v.5</option>
+                    <option value="rok">Rokbooster</option>
+                    <option value="scr">Scriptmerge</option>
+                </field>
+                <field name="spacer6" type="spacer" default="" label="JOTCACHE_SECURITY_SPACER"/>
+                <field name="urlfilter" type="radio" default="1" class="btn-group btn-group-yesno"
+                       label="JOTCACHE_URL_FILTER_LBL"
+                       description="JOTCACHE_URL_FILTER_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

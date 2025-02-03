@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" type="component" version="5.0">
+    <name>JotCache</name>
+    <author>Dudebaker</author>
+    <creationDate>February 2025</creationDate>
+    <copyright>(C)2010-2018 Vladimir Kanich. All rights reserved.</copyright>
+    <copyright>(C)2025+ Open Source Matters, Inc.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>7.0.0</version>
+    <description>COM_JOTCACHE_XML_DESCRIPTION</description>
+    <menu link="option=com_jotcache">COM_JOTCACHE</menu>
+    <scriptfile>script.php</scriptfile>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+            <file driver="sqlsrv" charset="utf8">sql/install.sqlsrv.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+            <file driver="sqlsrv" charset="utf8">sql/uninstall.sqlsrv.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <files folder="site">
+        <filename>jotcache.php</filename>
+        <folder>controllers</folder>
+    </files>
+    <administration>
+        <menu img="components/com_jotcache/assets/images/jotcache-logo.png" link="option=com_jotcache">
+            COM_JOTCACHE_TITLE
+        </menu>
+        <languages folder="language">
+            <language tag="en-GB">en-GB/en-GB.com_jotcache.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_jotcache.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_system_jotcache.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_system_jotcache.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_system_jotmarker.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_system_jotmarker.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_jotcacheplugins_crawler.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_jotcacheplugins_crawler.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_jotcacheplugins_crawlerext.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_jotcacheplugins_crawlerext.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_jotcacheplugins_recache.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_jotcacheplugins_recache.sys.ini</language>
+        </languages>
+        <files folder="admin">
+            <folder>assets</folder>
+            <folder>controllers</folder>
+            <folder>cron</folder>
+            <folder>custom</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>views</folder>
+            <folder>sql</folder>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>jotcache.php</filename>
+            <filename>controller.php</filename>
+        </files>
+    </administration>
+</extension>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="basic" label="JOTCACHE_FIELDSET_LABEL"
+              description="JOTCACHE_FIELDSET_LABEL_DESC">
+        <field name="mode" type="radio" default="0" class="btn-group btn-group-yesno" label="JOTCACHE_PARAM_MODE"
+               description="JOTCACHE_PARAM_MODE_DESC">
+            <option value="0">JOTCACHE_PARAM_TITLE</option>
+            <option value="1">JOTCACHE_PARAM_URI</option>
+        </field>
+        <field name="defbtime" type="text" default="0" label="JOTCACHE_PARAM_BTIME"
+               description="JOTCACHE_PARAM_BTIME_DESC"/>
+        <field name="urifilter" type="radio" default="1" class="btn-group btn-group-yesno"
+               label="JOTCACHE_PARAM_UFILTER" description="JOTCACHE_PARAM_UFILTER_DESC">
+            <option value="0">JDISABLED</option>
+            <option value="1">JENABLED</option>
+        </field>
+        <field name="showcookies" type="radio" default="1" class="btn-group btn-group-yesno"
+               label="JOTCACHE_PARAM_COOKIES" description="JOTCACHE_PARAM_COOKIES_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="showsessionvars" type="radio" default="1" class="btn-group btn-group-yesno"
+               label="JOTCACHE_PARAM_SESSION" description="JOTCACHE_PARAM_SESSION_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="fastdelete" type="radio" default="0" class="btn-group btn-group-yesno"
+               label="JOTCACHE_PARAM_FASTDEL" description="JOTCACHE_PARAM_FASTDEL_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="cleanglobal" type="radio" default="1" class="btn-group btn-group-yesno"
+               label="JOTCACHE_PARAM_CLEAN_GLOBAL" description="JOTCACHE_PARAM_CLEAN_GLOBAL_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="recachetimeout" type="text" default="900" label="JOTCACHE_PARAM_RECACHE_TIMEOUT"
+               description="JOTCACHE_PARAM_RECACHE_TIMEOUT_DESC"/>
+    </fieldset>
+    <fieldset name="debug" label="JOTCACHE_FIELDSET_DBG_LABEL" description="JOTCACHE_FIELDSET_DBG_LABEL_DESC">
+        <field name="showfname" type="radio" default="0" class="btn-group btn-group-yesno" label="JOTCACHE_PARAM_FNAME"
+               description="JOTCACHE_PARAM_FNAME_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="recachelog" type="radio" default="0" class="btn-group btn-group-yesno"
+               label="JOTCACHE_RECACHE_LOG_LBL" description="JOTCACHE_RECACHE_LOG_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+    </fieldset>
+    <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="COM_JOTCACHE_PERMISSIONS_DESC">
+        <field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" filter="rules"
+               validate="rules" component="com_jotcache" section="component"/>
+    </fieldset>
+</config>

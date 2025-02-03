@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="package" version="5.0" method="upgrade">
+    <name>JotCache</name>
+    <author>Dudebaker</author>
+    <creationDate>February 2025</creationDate>
+    <copyright>(C)2010-2018 Vladimir Kanich. All rights reserved.</copyright>
+    <copyright>(C)2025+ Open Source Matters, Inc.</copyright>
+    <packagename>jotcache</packagename>
+    <version>7.0.0</version>
+    <description>PKG_JOTCACHE_XML_DESCRIPTION</description>
+    <scriptfile>pkg_script.php</scriptfile>
+    <files>
+        <file type="component" id="com_jotcache">com_jotcache.zip</file>
+        <file type="plugin" id="jotcache" group="system">plg_system_jotcache.zip</file>
+        <file type="plugin" id="jotmarker" group="system">plg_system_jotmarker.zip</file>
+        <file type="plugin" id="jotloadmodule" group="content">plg_content_jotloadmodule.zip</file>
+        <file type="plugin" id="crawler" group="jotcacheplugins">plg_jotcacheplugins_crawler.zip</file>
+        <file type="plugin" id="crawlerext" group="jotcacheplugins">plg_jotcacheplugins_crawlerext.zip</file>
+        <file type="plugin" id="recache" group="jotcacheplugins">plg_jotcacheplugins_recache.zip</file>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.pkg_jotcache.sys.ini</language>
+    </languages>    
+</extension>

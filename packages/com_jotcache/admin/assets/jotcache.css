@@ -1,0 +1,131 @@
+/**
+ * @package         JotCache
+ *
+ * @copyright   (C) 2010-2018 Vladimir Kanich
+ * @copyright   (C) 2025+ Open Source Matters, Inc.
+ * @license         GNU General Public License version 2 or later
+ */
+
+.icon-statplugin, .icon-statglobal, .icon-statclear {
+    display: none !important;
+}
+
+#toolbar-statplugin button.btn, #toolbar-statglobal button.btn, #toolbar-statclear button.btn {
+    background-image: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold !important;
+}
+
+#toolbar-statplugin button.btn:focus, #toolbar-statglobal button.btn:focus, #toolbar-statclear button.btn:focus {
+    background: silver 0 !important;
+}
+
+#toolbar-statplugin button.btn:hover, #toolbar-statglobal button.btn:hover, #toolbar-statclear button.btn:hover {
+    background: linear-gradient(to bottom, #969696, #303030) 0 !important;
+}
+
+#toolbar-popup-help {
+    float: right;
+}
+
+.btn-wrapper {
+    float: left;
+}
+
+#jotcache-selector-form {
+    width: 150px;
+    margin-right: 5px;
+}
+
+#markid_chzn {
+    vertical-align: middle;
+    font-weight: bold;
+    width: 150px !important;
+    display: block;
+}
+
+#markid_chzn a.chzn-single {
+    height: inherit;
+    margin-right: 30px;
+    line-height: 26px;
+    width: 150px;
+}
+
+#modal-help {
+    width: 980px;
+    height: 760px;
+    left: 30%;
+}
+
+#modal-help div.modal-body {
+    overflow-y: hidden;
+}
+
+select#markid {
+    width: 100%;
+}
+
+#frontForm {
+    margin: 0;
+}
+
+.icon-cookie:before {
+    content: "\6b";
+    color: #FFBB00;
+}
+
+.icon-cookie-active:before {
+    content: "\6b";
+    color: #FF6600;
+}
+
+.icon-refresh:before {
+    content: "\3c";
+    color: #5d1;
+}
+
+.icon-deleteall:before {
+    content: "\49";
+    color: #FF0000;
+}
+
+.icon-deletedomain:before {
+    content: "\49";
+    color: #2A00FF;
+}
+
+.icon-recache:before {
+    content: "\E001" !important;
+    color: #69c;
+}
+
+.icon-tplex:before {
+    content: "\E013" !important;
+    color: #FF6600 !important;
+}
+
+.icon-bcache:before {
+    content: "\E013";
+    color: #08C;
+}
+
+.icon-jotcache-logo {
+    background: url("../../../components/com_jotcache/assets/images/icon-jotcache-logo.png") no-repeat 0 5px;
+    width: 20px !important;
+    height: 20px !important;
+    padding: 0 0 5px 0 !important;
+}
+
+.status-title {
+    padding-right: 1em;
+    font-weight: bold;
+    color: #999;
+    float: left;
+}
+
+table.adminlist thead tr td.no-border-select {
+    outline: white solid 1px;
+    background-color: white;
+}
+
